@@ -18,7 +18,7 @@ $(error cannot build without ffmpeg headers)
 endif
 
 CFLAGS := -O2 -Wall $(shell pkg-config --cflags $(PKGS))
-LDLIBS := $(shell pkg-config --libs $(PKGS))
+LDLIBS := $(shell pkg-config --libs $(PKGS)) -lm
 
 qpprobe: qpprobe.c
 	$(CC) $(CFLAGS) -o $@ $< $(LDLIBS)
