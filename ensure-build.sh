@@ -5,6 +5,8 @@
 # fail to exec or crash, so smoke-test it and rebuild rather than trusting it.
 if ! ./qpprobe 2>/dev/null; [ $? -ne 2 ]; then
   echo "building qpprobe for this machine..."
-  make clean >/dev/null 2>&1
-  make || { echo "build failed -- see the Makefile message above."; exit 1; }
+  # Remove only the binary: `make clean` also deletes out/, which holds encodes
+  # that took hours to produce.
+  rm -f qpprobe
+  make qpprobe || { echo "build failed -- see the Makefile message above."; exit 1; }
 fi

@@ -1,6 +1,6 @@
 # Built per machine: the binary is ABI-locked to the local libavcodec.
 qpprobe
-# Encodes, CSVs and reports. ensure-build.sh runs `make clean`, which wipes this.
+# Encodes, CSVs and reports. `make clean` wipes this; ensure-build.sh no longer does.
 out/
 # Raw UBFC-rPPG clips (8.3 GB locally; on Kaggle as malekdinarito/ubfc-rppg-dataset).
 ubfc-rppg/
