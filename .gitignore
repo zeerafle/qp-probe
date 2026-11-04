@@ -3,6 +3,6 @@ qpprobe
 # Encodes, CSVs and reports. `make clean` wipes this; ensure-build.sh no longer does.
 out/
 # Raw UBFC-rPPG clips (8.3 GB locally; on Kaggle as malekdinarito/ubfc-rppg-dataset).
-ubfc-rppg/
+ubfc-rppg
 __pycache__/
 .venv/
